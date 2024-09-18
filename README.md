@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+## https://www.youtube.com/watch?v=Ahwoks_dawU
+
+## // TODO: After Clerk installation at 28:42
+
 First, run the development server:
 
 ```bash
