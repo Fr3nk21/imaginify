@@ -1,7 +1,7 @@
 "use client";
 
 import { navLinks } from "@/constants";
-import { SignedIn } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -36,12 +36,22 @@ const Sidebar = () => {
                         : "text-gray-700"
                     }`}
                   >
-                    {link.label}
+                    <Link className="sidebar-link" href={link.route}>
+                      <Image
+                        src={link.icon}
+                        alt="logo"
+                        width={24}
+                        height={24}
+                        className={`${isActive && "brightness-200"}`}
+                      />
+                      {link.label}
+                    </Link>
                   </li>
                 );
               })}
             </ul>
           </SignedIn>
+          <SignedOut></SignedOut>
         </nav>
       </div>
     </aside>
